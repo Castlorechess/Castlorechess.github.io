@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Castlore Chess</title>
-    <link rel="stylesheet" href="https://unpkg.com/chessboardjs/dist/chessboard-1.0.0.min.css" />
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f2f5; }
-        header { background: #1f4b99; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
-        header h1 { margin: 0; font-size: 22px; }
-        nav a { color: white; text-decoration: none; margin-left: 15px; }
-        .container { padding: 20px; }
-        .puzzle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-        .puzzle { background: white; padding: 10px; border-radius: 8px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-        .stars { color: gold; font-size: 18px; margin-top: 5px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castlore Chess Academy</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #222; color: white; padding: 1rem; text-align: center; }
+    nav { background: #444; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; padding: 0.75rem 1.5rem; display: block; }
+    nav a:hover { background: #666; }
+    .container { max-width: 1000px; margin: auto; padding: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .card { background: white; border-radius: 8px; padding: 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 0.5rem; }
+    footer { background: #222; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+</style>
 </head>
 <body>
+
 <header>
-    <h1>Castlore Chess</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Courses</a>
-        <a href="#">Training</a>
-    </nav>
+    <h1>Castlore Chess Academy</h1>
+    <p>Master your chess skills — tactics, openings, endings & more</p>
 </header>
 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="tactics.html">Tactics</a>
+    <a href="openings.html">Openings</a>
+    <a href="endings.html">Endings</a>
+    <a href="beginners.html">Beginners</a>
+    <a href="leaders.html">Leaders' Training</a>
+    <a href="login.html">Login</a>
+</nav>
+
 <div class="container">
-    <h2>Double Attack - Level 1</h2>
-    <div class="puzzle-grid">
-        <div class="puzzle">
-            <div id="board1" style="width: 200px"></div>
-            <div class="stars">★★★</div>
+    <h2>Welcome to Castlore Chess</h2>
+    <p>Choose a section to start improving your game:</p>
+    <div class="grid">
+        <div class="card">
+            <h3>Tactics</h3>
+            <p>Sharpen your calculation and spotting skills.</p>
+            <a href="tactics.html">View Tactics</a>
         </div>
-        <div class="puzzle">
-            <div id="board2" style="width: 200px"></div>
-            <div class="stars">★★☆</div>
+        <div class="card">
+            <h3>Openings</h3>
+            <p>Learn how to start the game with advantage.</p>
+            <a href="openings.html">View Openings</a>
         </div>
-        <div class="puzzle">
-            <div id="board3" style="width: 200px"></div>
-            <div class="stars">★★★</div>
+        <div class="card">
+            <h3>Endings</h3>
+            <p>Convert your advantage in the final phase.</p>
+            <a href="endings.html">View Endings</a>
+        </div>
+        <div class="card">
+            <h3>Beginners</h3>
+            <p>Start your journey into the chess world.</p>
+            <a href="beginners.html">Start Learning</a>
+        </div>
+        <div class="card">
+            <h3>Leaders' Training</h3>
+            <p>Special training for student leaders and coaches.</p>
+            <a href="leaders.html">View Training</a>
         </div>
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://unpkg.com/chessboardjs/dist/chessboard-1.0.0.min.js"></script>
-<script>
-    // Example FEN positions for puzzles
-    var board1 = Chessboard('board1', { position: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1' });
-    var board2 = Chessboard('board2', { position: '8/8/8/8/8/4K3/8/7k w - - 0 1' });
-    var board3 = Chessboard('board3', { position: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1' });
-</script>
+<footer>
+    <p>© 2025 Castlore Chess Academy</p>
+</footer>
+
 </body>
 </html>
