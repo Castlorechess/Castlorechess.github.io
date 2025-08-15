@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castlore Chess</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+        }
+        header {
+            background: #1f4b99;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .course-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .course-card h3 {
+            margin-top: 0;
+        }
+        .chess-board {
+            display: grid;
+            grid-template-columns: repeat(8, 30px);
+            grid-template-rows: repeat(8, 30px);
+        }
+        .chess-board div {
+            width: 30px;
+            height: 30px;
+        }
+        .light { background: #f0d9b5; }
+        .dark { background: #b58863; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Castlore Chess</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Training</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Available Courses</h2>
+    <div class="course-grid">
+        <div class="course-card">
+            <h3>A Double Attack</h3>
+            <div class="chess-board">
+                <!-- Simple static chessboard example -->
+                <script>
+                    const boardColors = [];
+                    for (let row = 0; row < 8; row++) {
+                        for (let col = 0; col < 8; col++) {
+                            let square = document.createElement("div");
+                            square.className = (row + col) % 2 === 0 ? "light" : "dark";
+                            document.currentScript.parentNode.appendChild(square);
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="course-card">
+            <h3>Fork Tactics</h3>
+            <p>36 puzzles to master your forks!</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
